@@ -17,18 +17,18 @@ import os
 parser = argparse.ArgumentParser()
 
 # Required parameters
-parser.add_argument("--dataset_dir", default="dataset", type=str,
+parser.add_argument("--dataset_dir", default="../dataset", type=str,
                     help="The dataset dictionary")
-parser.add_argument("--save_dataset_dir", default="save_dataset", type=str,
+parser.add_argument("--save_dataset_dir", default="../dataset/save_dataset", type=str,
                     help="The save processed data to saving dataset dictionary")
-parser.add_argument("--OpenKE_dir", default="OpenKE/benchmarks/CommonGen", type = str,
+parser.add_argument("--OpenKE_dir", default="../OpenKE/benchmarks/CommonGen", type = str,
                     help="The dictionary to save the processed data for OpenKE")
 parser.add_argument("--save_conceptnet",
                     default="conceptnet.csv",
                     type=str,
                     help="The output conceptnet data dir.")
 parser.add_argument("--commongend",
-                    default="commongen.dev.src_alpha.txt",
+                    default="commongen_data/commongen.dev.src_new.txt",
                     type=str,
                     help="The default dir of the commongen dataset.")
 
