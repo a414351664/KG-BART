@@ -3,9 +3,9 @@ rig = {}
 rellef = {}
 relrig = {}
 
-triple = open("train2id.txt", "r")
-valid = open("valid2id.txt", "r")
-test = open("test2id.txt", "r")
+triple = open("benchmarks/CommonGen/train2id.txt", "r")
+valid = open("benchmarks/CommonGen/valid2id.txt", "r")
+test = open("benchmarks/CommonGen/test2id.txt", "r")
 
 tot = (int)(triple.readline())
 for i in range(tot):
@@ -62,7 +62,7 @@ test.close()
 valid.close()
 triple.close()
 
-f = open("type_constrain.txt", "w")
+f = open("benchmarks/CommonGen/type_constrain.txt", "w")
 f.write("%d\n"%(len(rellef)))
 for i in rellef:
 	f.write("%s\t%d"%(i,len(rellef[i])))
@@ -99,7 +99,7 @@ s11=0
 s1n=0
 sn1=0
 snn=0
-f = open("test2id.txt", "r")
+f = open("benchmarks/CommonGen/test2id.txt", "r")
 tot = (int)(f.readline())
 for i in range(tot):
 	content = f.readline()
@@ -117,12 +117,12 @@ for i in range(tot):
 f.close()
 
 
-f = open("test2id.txt", "r")
-f11 = open("1-1.txt", "w")
-f1n = open("1-n.txt", "w")
-fn1 = open("n-1.txt", "w")
-fnn = open("n-n.txt", "w")
-fall = open("test2id_all.txt", "w")
+f = open("benchmarks/CommonGen/test2id.txt", "r")
+f11 = open("benchmarks/CommonGen/1-1.txt", "w")
+f1n = open("benchmarks/CommonGen/1-n.txt", "w")
+fn1 = open("benchmarks/CommonGen/n-1.txt", "w")
+fnn = open("benchmarks/CommonGen/n-n.txt", "w")
+fall = open("benchmarks/CommonGen/test2id_all.txt", "w")
 tot = (int)(f.readline())
 fall.write("%d\n"%(tot))
 f11.write("%d\n"%(s11))
