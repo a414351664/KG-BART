@@ -32,6 +32,8 @@ python conceptnet.py --dataset_dir "dataset"  --save_dataset_dir "dataset/save_d
 ```
 cd OpenKE
 git clone -b OpenKE-PyTorch https://github.com/thunlp/OpenKE
+cd openke
+sh make.sh
 cd benchmarks/CommonGen
 python n-n.py
 python train_transe_CommonGen.py
