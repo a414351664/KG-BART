@@ -12,9 +12,9 @@ import spacy
 nlp = spacy.load('en_core_web_sm')
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--dataset_dir", default="Dataset", type =str,
+parser.add_argument("--dataset_dir", default="../dataset", type =str,
                     help="The dataset dictionary")
-parser.add_argument("--save_dataset_dir", default="Dataset", type=str,
+parser.add_argument("--save_dataset_dir", default="../dataset/save_dataset", type=str,
                     help="The save processed data to saving dataset dictionary")
 parser.add_argument("--org_conceptnet",
                     default="conceptnet-assertions-5.7.0.csv",
@@ -22,6 +22,10 @@ parser.add_argument("--org_conceptnet",
                     help="The input conceptnet dir. Should contain the .tsv files (or other data files) for the task.")
 parser.add_argument("--save_conceptnet",
                     default="conceptnet.csv",
+                    type=str,
+                    help="The output conceptnet data dir.")
+parser.add_argument("--commongend",
+                    default="commongen_data/commongen.dev.src_new.txt",
                     type=str,
                     help="The output conceptnet data dir.")
 
